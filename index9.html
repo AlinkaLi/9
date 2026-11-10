@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DON'T LOOK BACK</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section id="menu" class="screen active">
+        <div class="menu-content">
+            <p class="subtitle">YOU ARE NOT ALONE</p>
+            <h1>DON'T LOOK<br>BACK</h1>
+            <p class="description">
+                Three doors. Three trials. One chance to escape.
+            </p>
+            <button id="startBtn">START GAME</button>
+        </div>
+    </section>
+
+    <section id="game" class="screen">
+        <header>
+            <h2>DON'T LOOK BACK</h2>
+            <div class="stats">
+                <span id="playerName">Player</span>
+                <span id="round">ROUND 1 / 3</span>
+                <span id="lives">♥ ♥ ♥</span>
+            </div>
+        </header>
+
+        <main>
+            <h2 id="roomTitle">CHOOSE A DOOR</h2>
+            <p id="message">
+                A trial awaits you behind one of the doors...
+            </p>
+
+            <div id="doors" class="doors">
+                <button class="door" data-door="1">
+                    <span>01</span>
+                    <div class="door-knob"></div>
+                </button>
+                <button class="door" data-door="2">
+                    <span>02</span>
+                    <div class="door-knob"></div>
+                </button>
+                <button class="door" data-door="3">
+                    <span>03</span>
+                    <div class="door-knob"></div>
+                </button>
+            </div>
+
+            <div id="battle" class="battle hidden">
+                <h3>CARD TRIAL</h3>
+                <div class="cards">
+                    <div class="player-card">
+                        <p>YOUR CARD</p>
+                        <div id="playerCard" class="card">
+                            ?
+                        </div>
+                        <p id="playerPoints">0 points</p>
+                    </div>
+
+                    <div class="vs">VS</div>
+
+                    <div class="computer-card">
+                        <p>STRANGER</p>
+                        <div id="computerCard" class="card">
+                            ?
+                        </div>
+                        <p id="computerPoints">0 points</p>
+                    </div>
+                </div>
+
+                <button id="revealBtn">
+                    REVEAL CARDS
+                </button>
+
+                <h3 id="battleResult"></h3>
+
+                <button id="nextBtn" class="hidden">
+                    NEXT DOOR
+                </button>
+            </div>
+
+            <div class="score">
+                <span id="totalPlayer">Your points: 0</span>
+                <span id="totalComputer">
+                    Stranger's points: 0
+                </span>
+            </div>
+        </main>
+    </section>
+
+    <section id="screamer" class="screen">
+        <div class="screamer-flash"></div>
+        <img src="999.jpg" alt="Jumpscare" id="screamerImage">
+        <h1>YOU FAILED</h1>
+        <audio id="screamerSound" preload="auto">
+            <source src="999.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+    <section id="finalScreen" class="screen">
+        <div class="final-content">
+            <h1 id="finalTitle">YOU ESCAPED</h1>
+            <p id="finalText"></p>
+            <p id="finalScore"></p>
+            <button id="restartBtn">
+                PLAY AGAIN
+            </button>
+        </div>
+    </section>
+
+    <script src="script9.js"></script>
+</body>
+</html>
